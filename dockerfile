@@ -9,7 +9,7 @@ RUN apt-get update && \
 RUN mkdir -p /root/.ssh && chmod 700 /root/.ssh
 
 # ตั้งรหัสผ่าน root (เปลี่ยน password เป็นรหัสผ่านที่คุณต้องการ)
-RUN echo 'root:password' | chpasswd
+RUN echo 'root:151143' | chpasswd
 
 # อนุญาตการเชื่อมต่อ SSH root
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
