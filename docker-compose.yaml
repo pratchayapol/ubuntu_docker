@@ -1,0 +1,9 @@
+version: '3'
+services:
+  ubuntu:
+    build: .
+    container_name: ubuntu_container
+    stdin_open: true
+    tty: true
+    ports:
+      - "2222:22"
