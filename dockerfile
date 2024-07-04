@@ -6,7 +6,7 @@ RUN apt-get update && \
     mkdir /var/run/sshd
 
 # สร้างโฟลเดอร์สำหรับ SSH keys
-RUN mkdir /root/.ssh && chmod 700 /root/.ssh
+RUN mkdir -p /root/.ssh && chmod 700 /root/.ssh
 
 # ตั้งรหัสผ่าน root (เปลี่ยน password เป็นรหัสผ่านที่คุณต้องการ)
 RUN echo 'root:password' | chpasswd
